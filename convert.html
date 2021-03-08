@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/convertStyle.css">
+    <title>Currency Converter</title>
+</head>
+<body>
+   <img src="./images/money.jpg" alt="" class="money-img"> 
+   <h1>Currency Converter</h1>
+   <p>Choose The Currency And Amount To Get The Exchange Rate</p>
+   <div class="Container">
+       <div class="Currency">
+           <select  id="currency-one">
+            <option value="USD" selected>United States dollar</option>
+            <option value="EUR">Euro</option>
+            <option value="GBP">British pound sterling</option>
+            <option value="AUD">Australian Dollar</option>
+            <option value="ATS">Austrian shilling</option>
+            <option value="CAD">Canadian dollar</option>
+            <option value="HKD">Hong Kong dollar</option>
+            <option value="HUF">Hungarian forint</option>
+            <option value="ISK">Iceland Krona</option>
+            <option value="INR">Indian rupee</option>
+            <option value="IDR">Indonesian rupiah</option>
+            <option value="IEP">Irish Pound</option>
+            <option value="ILS">Israeli new shekel</option>
+            <option value="KRW">Korean won</option>
+            <option value="NZD">New Zealand dollar</option>
+            <option value="NOK">Norway Kroner</option>
+            <option value="SGD">Singapore Dollar</option>
+            <option value="ZAR">South Africa Rand</option>
+            <option value="KRW">South Korean Won</option>
+            <option value="XPT">Platinum Ounces</option>
+            <option value="BDT">Bangladeshi taka</option>
+           </select>
+           <input type="number" id="amount-one" placeholder="0" value="1">
+       </div>
+       <div class="swap-rate-container">
+           <button class="btn" id="swap">Change</button>
+           <div class="rate" id="rate"></div>
+       </div>
+        <div class="Currency">
+            <select id="currency-two">
+                <option value="USD" >United States dollar</option>
+                <option value="EUR">Euro</option>
+                <option value="GBP">British pound sterling</option>
+                <option value="AUD">Australian Dollar</option>
+                <option value="ATS">Austrian shilling</option>
+                <option value="CAD">Canadian dollar</option>
+                <option value="HKD">Hong Kong dollar</option>
+                <option value="HUF">Hungarian forint</option>
+                <option value="ISK">Iceland Krona</option>
+                <option value="INR">Indian rupee</option>
+                <option value="IDR">Indonesian rupiah</option>
+                <option value="IEP">Irish Pound</option>
+                <option value="ILS">Israeli new shekel</option>
+                <option value="KRW">Korean won</option>
+                <option value="NZD">New Zealand dollar</option>
+                <option value="NOK">Norway Kroner</option>
+                <option value="SGD">Singapore Dollar</option>
+                <option value="ZAR">South Africa Rand</option>
+                <option value="KRW">South Korean Won</option>
+                <option value="XPT">Platinum Ounces</option>
+                <option value="BDT" selected>Bangladeshi taka</option>
+            </select>
+            <input type="number" id="amount-two" placeholder="0" value="0">
+        </div>
+   </div>
+   <h3>Created by Rabeya</h3>
+   <script src="./Javascript/convertJS.js"></script>
+</body>
+</html>

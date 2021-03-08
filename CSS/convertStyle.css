@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,300;1,500;1,600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+
+}
+body{
+    background-color:#777 ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100hv;
+    margin: 0;
+    padding: 20px;
+}
+.money-img{
+    width: 150px;
+}
+h1{
+    color: #3498DB;
+}
+p{
+    text-align: center;
+}
+.btn{
+    color: #fff;
+    background:#3498DB ;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 12px;
+    padding: 5px 12px;
+}
+.Currency{
+    padding: 40px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Currency select{
+    padding: 10px 20px 10px 10px;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    border: 2px solid white;
+    font-size: 16px;
+    background: transparent;
+    
+}
+#amount-one{
+    margin-left:20px ;
+    background-color:mediumaquamarine ;
+}
+#amount-two{
+    margin-left:20px ;
+    background-color:mediumaquamarine ;
+}
+.Currency input{
+    border: 0;
+    background: transparent;
+    font-size: 30px;
+    text-align: right;
+}
+.swap-rate-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.rate{
+    color: turquoise;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 0 14px;
+    text-align: right;
+}
+select:focus,input:focus,button:focus{
+    outline: 0;
+}
