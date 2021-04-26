@@ -1,75 +1,92 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html>
+
 <head>
+
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./CSS/convertStyle.css">
-    <title>Currency Converter</title>
+    <title>Document</title>
+    <script>
+        var gbp, usd, eur, cad, aud;
+
+        function init() {
+            gbp = document.getElementById("GBP");
+            usd = document.getElementById("USD");
+            eur = document.getElementById("EUR");
+            cad = document.getElementById("CAD");
+            aud = document.getElementById("AUD");
+        }
+
+        function gbpfunc() {
+            usd.value = parseFloat(gbp.value) * 0.49246;
+            eur.value = parseFloat(gbp.value) * 0.69714;
+            cad.value = parseFloat(gbp.value) * 0.50221;
+            aud.value = parseFloat(gbp.value) * 0.43497;
+        }
+
+        function eurfunc() {
+            gbp.value = parseFloat(eur.value) * 1.43448;
+            usd.value = parseFloat(eur.value) * 0.70641;
+            cad.value = parseFloat(eur.value) * 0.72037;
+            aud.value = parseFloat(eur.value) * 0.62382;
+        }
+
+        function cadfunc() {
+            gbp.value = parseFloat(cad.value) * 1.99169;
+            usd.value = parseFloat(cad.value) * 0.98054;
+            eur.value = parseFloat(cad.value) * 1.38814;
+            aud.value = parseFloat(cad.value) * 0.86613;
+        }
+
+        function audfunc() {
+            gbp.value = parseFloat(aud.value) * 2.29964;
+            usd.value = parseFloat(aud.value) * 1.13262;
+            eur.value = parseFloat(aud.value) * 1.60329;
+            cad.value = parseFloat(aud.value) * 0.88297;
+        }
+
+        function usdfunc() {
+            gbp.value = parseFloat(usd.value) * 2.03032;
+            eur.value = parseFloat(usd.value) * 1.41544;
+            cad.value = parseFloat(usd.value) * 1.01941;
+            aud.value = parseFloat(usd.value) * 0.88297;
+        }
+
+    </script>
 </head>
-<body>
-   <img src="./images/money.jpg" alt="" class="money-img"> 
-   <h1>Currency Converter</h1>
-   <p>Choose The Currency And Amount To Get The Exchange Rate</p>
-   <div class="Container">
-       <div class="Currency">
-           <select  id="currency-one">
-            <option value="USD" selected>United States dollar</option>
-            <option value="EUR">Euro</option>
-            <option value="GBP">British pound sterling</option>
-            <option value="AUD">Australian Dollar</option>
-            <option value="ATS">Austrian shilling</option>
-            <option value="CAD">Canadian dollar</option>
-            <option value="HKD">Hong Kong dollar</option>
-            <option value="HUF">Hungarian forint</option>
-            <option value="ISK">Iceland Krona</option>
-            <option value="INR">Indian rupee</option>
-            <option value="IDR">Indonesian rupiah</option>
-            <option value="IEP">Irish Pound</option>
-            <option value="ILS">Israeli new shekel</option>
-            <option value="KRW">Korean won</option>
-            <option value="NZD">New Zealand dollar</option>
-            <option value="NOK">Norway Kroner</option>
-            <option value="SGD">Singapore Dollar</option>
-            <option value="ZAR">South Africa Rand</option>
-            <option value="KRW">South Korean Won</option>
-            <option value="XPT">Platinum Ounces</option>
-            <option value="BDT">Bangladeshi taka</option>
-           </select>
-           <input type="number" id="amount-one" placeholder="0" value="1">
-       </div>
-       <div class="swap-rate-container">
-           <button class="btn" id="swap">Change</button>
-           <div class="rate" id="rate"></div>
-       </div>
-        <div class="Currency">
-            <select id="currency-two">
-                <option value="USD" >United States dollar</option>
-                <option value="EUR">Euro</option>
-                <option value="GBP">British pound sterling</option>
-                <option value="AUD">Australian Dollar</option>
-                <option value="ATS">Austrian shilling</option>
-                <option value="CAD">Canadian dollar</option>
-                <option value="HKD">Hong Kong dollar</option>
-                <option value="HUF">Hungarian forint</option>
-                <option value="ISK">Iceland Krona</option>
-                <option value="INR">Indian rupee</option>
-                <option value="IDR">Indonesian rupiah</option>
-                <option value="IEP">Irish Pound</option>
-                <option value="ILS">Israeli new shekel</option>
-                <option value="KRW">Korean won</option>
-                <option value="NZD">New Zealand dollar</option>
-                <option value="NOK">Norway Kroner</option>
-                <option value="SGD">Singapore Dollar</option>
-                <option value="ZAR">South Africa Rand</option>
-                <option value="KRW">South Korean Won</option>
-                <option value="XPT">Platinum Ounces</option>
-                <option value="BDT" selected>Bangladeshi taka</option>
-            </select>
-            <input type="number" id="amount-two" placeholder="0" value="0">
-        </div>
-   </div>
-   <h3>Created by Rabeya</h3>
-   <script src="./Javascript/convertJS.js"></script>
+<header>
+    <h1 class="Head" >Welcome to Currency Converter</h1>
+    <div>
+        <img src="./images/money.jpg" alt="" class="money-img">
+    </div>
+</header>
+
+<body onload="init()">
+
+    <input type="text" id="GBP" size="10" value="0" onchange="gbpfunc()" />
+    <label for="GBP"> GBP </label>
+
+    <br>
+
+    <input type="text" id="USD" size="10" value="0" onchange="usdfunc()" />
+    <label for="USD"> USD </label>
+
+    <br>
+
+    <input type="text" id="EUR" size="10" value="0" onchange="eurfunc()" />
+    <label for="EUR"> EUR </label>
+
+    <br>
+
+    <input type="text" id="CAD" size="10" value="0" onchange="cadfunc()" />
+    <label for="CAD"> CAD </label>
+
+    <br>
+
+    <input type="text" id="AUD" size="10" value="0" onchange="audfunc()" />
+    <label for="AUD"> AUD </label>
+
 </body>
+
 </html>
