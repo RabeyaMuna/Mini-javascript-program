@@ -5,6 +5,10 @@
     box-sizing: border-box; 
 
 }
+.Head{
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+}
 body{
     background-color:#777 ;
     display: flex;
@@ -15,8 +19,13 @@ body{
     margin: 0;
     padding: 20px;
 }
+
 .money-img{
-    width: 150px;
+    width: 80%;
+    height: 40%;
+    padding-left: 120px;
+    padding-top: 30px;
+    padding-bottom: 20px;
 }
 h1{
     color: #3498DB;
