@@ -19,13 +19,19 @@ body{
     margin: 0;
     padding: 20px;
 }
+div {
+    padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  height: 800px;
+}
 
 .money-img{
-    width: 80%;
-    height: 40%;
-    padding-left: 120px;
-    padding-top: 30px;
-    padding-bottom: 20px;
+   
+   width: 60%;
+  height: 200px;
+  padding-bottom: 20px;
+  
 }
 h1{
     color: #3498DB;
